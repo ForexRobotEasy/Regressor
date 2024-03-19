@@ -1,0 +1,78 @@
+
+//+------------------------------------------------------------------+
+//|                                                   Regressor.mq5 |
+//|         Copyright 2021, Forex Robot Easy Team, forexroboteasy.com |
+//|                                               All rights reserved |
+//+------------------------------------------------------------------+
+
+//--- Define the Regressor class
+class Regressor
+{
+   private:
+      double channelWidth;  // Current width of the channel
+      
+   public:  
+      //--- Constructor
+      Regressor()
+      {
+         channelWidth = 0.0;
+      }
+      
+      //--- Method to calculate the channel boundaries
+      void CalculateChannelBoundaries()
+      {
+         // Code to calculate channel boundaries based on market situation and price movements
+         // ...
+         // ...
+         
+         // Code to adjust the channel width based on the magnitude of price deviations
+         // ...
+         // ...
+         
+         // Code to set the calculated channel width
+         double newChannelWidth = 0.0;  // Placeholder value, replace with actual calculated channel width
+         SetChannelWidth(newChannelWidth);
+      }
+      
+      //--- Method to set the channel width
+      void SetChannelWidth(const double width)
+      {
+         channelWidth = width;
+      }
+      
+      //--- Method to get the channel width
+      double GetChannelWidth() const
+      {
+         return channelWidth;
+      }
+      
+      //--- Method to check the operability of the software
+      void TestSoftware()
+      {
+         // Code to test the operability of the software
+         // ...
+         // ...
+         
+         // Code to output the result of the test
+         Print('Software is operational.');
+      }
+};
+
+//--- Create an instance of the Regressor class
+Regressor regressor;
+
+//--- Entry point of the program
+void OnStart()
+{
+   // Calculate and adjust the channel width in real-time
+   regressor.CalculateChannelBoundaries();
+   
+   // Get the adjusted channel width
+   double adjustedChannelWidth = regressor.GetChannelWidth();
+   
+   // Output the adjusted channel width
+   Print('Adjusted channel width: ', adjustedChannelWidth);
+   
+   // Test the operability of the software
+   regressor.TestSoftware();
+}
